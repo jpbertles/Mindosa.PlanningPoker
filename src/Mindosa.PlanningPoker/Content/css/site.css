@@ -1,0 +1,214 @@
+body {
+  font: 16px Segoe UI;
+  background: url('/Content/images/background.jpg') fixed;
+}
+#logo {
+  width: 75%;
+  margin: 15px auto 30px;
+  display: block;
+}
+.inner-page #logo {
+  width: 60%;
+  margin: 8px auto;
+}
+.centered {
+  text-align: center;
+}
+#content-panel {
+  max-width: 1020px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: .2em;
+  position: relative;
+  box-shadow: 1px 2px 10px 1px #666;
+}
+.header {
+  text-align: center;
+}
+#user-list li {
+  display: inline-table;
+  list-style: none;
+  padding-right: 20px;
+  text-align: center;
+}
+.inner-panel {
+  background: rgba(126, 126, 126, 0.5);
+  border-radius: .2em;
+  margin: 20px auto;
+  padding: 8px;
+  box-shadow: 1px 2px 3px 2px #ccc;
+}
+#action-panel {
+  padding: 24px;
+  display: inline-block;
+  text-align: left;
+}
+.user-name {
+  color: #333;
+}
+.user-card.card {
+  width: 2em;
+  height: 2.5em;
+  font-size: 2.5em;
+  line-height: 2.5em;
+  box-shadow: 1px 1px 3px 1px #666;
+  margin: 8px auto;
+}
+.user-card.selected {
+  background: #89d7d7;
+}
+.user-card.observer {
+  background: #ffd800;
+}
+.card-list {
+  text-align: center;
+}
+#card-list li {
+  display: inline-block;
+  width: 2em;
+  height: 3em;
+  font-size: 3em;
+  line-height: 3em;
+}
+#card-list .selected {
+  background: #0e8a8a;
+}
+.card {
+  border: 1px solid #ccc;
+  margin: 8px;
+  border-radius: .2em;
+  cursor: pointer;
+  background-color: #fafafa;
+  box-shadow: 1px 2px 3px 2px #ccc;
+}
+input {
+  font-size: 1.01em;
+  border: 1px solid #CCCCCC;
+}
+input[type='button'],
+input[type='submit'],
+button {
+  background: #0e8a8a;
+  color: #fafafa;
+  padding: 0.4em 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+input[type='button'] i,
+input[type='submit'] i,
+button i {
+  padding-right: 8px;
+  font-size: 1.25em;
+}
+input[type='text'] {
+  background: #FFFFFF;
+  border-radius: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #333333;
+  padding: 8px 12px;
+  width: 400px;
+}
+a i {
+  color: #7E7E7E;
+  font-size: 2em;
+}
+#link-panel {
+  float: right;
+}
+#link-panel a {
+  padding-left: 12px;
+  text-shadow: 1px 1px 0 #333;
+}
+#settings-panel {
+  display: none;
+  position: absolute;
+  float: right;
+  right: 0;
+  background: #fafafa;
+  padding: 20px;
+  box-shadow: 1px 2px 3px 2px #666;
+}
+.actions {
+  text-align: right;
+}
+.setting {
+  padding: 15px;
+}
+.setting p {
+  font-size: .7em;
+  font-style: italic;
+  text-align: left;
+  max-width: 400px;
+}
+.checkbox {
+  width: 20px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  display: inline-block;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox label {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0px 1px 1px #ffffff, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px #ffffff, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px #ffffff, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
+}
+.checkbox label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.checkbox label:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.5;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.field-label {
+  display: block;
+}
+.clear-fix {
+  clear: both;
+}
+#footer {
+  margin-top: 50px;
+  font-size: 14px;
+}
+#footer i {
+  color: #0e8a8a;
+}

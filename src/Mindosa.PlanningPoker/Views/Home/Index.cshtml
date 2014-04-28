@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+<p>This is a version of <a href="http://en.wikipedia.org/wiki/Planning_poker">Planning Poker</a> tailored for how my company operates. Generally speaking, that means being flexible. At any point you can change the cards being used and switch to/from being an observer.</p>
+<p>How does it work? Well, that is pretty simple. Either you can create a new group or join an existing one. To vote, click on one of the cards. When all non-observers have voted, the results will be shown to everyone. You can clear the entries at any time. When you're done simply close the browser window or tab you're using.</p>
+
+<div class="centered">
+    <div id="action-panel" class="inner-panel">
+        <form action="/GetStarted" method="POST">
+            <div class="setting">
+                <label class="field-label" for="userName">User Name:</label>
+                <input type="text" name="userName" placeholder="User Name" />
+                <p>This is the name other users in your group will identify you with. If you don't care, you can leave it blank.</p>
+            </div>
+            <div class="setting">
+                <label class="field-label" for="groupName">Group Name:</label>
+                <input type="text" name="groupName" placeholder="Group Name" />
+                <p>This is the name of the group you either wish to join or create. If you're creating a group and don't care what the name is, leave it blank.</p>
+            </div>
+            <div class="actions">
+                <button id="btn-updateSettings" title="Update Settings">
+                    <i class="fa fa-sign-in"></i>Get Started
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(function() {
+            var priorUserName = $.cookie('username');
+            if (priorUserName) {
+                $("#userName").val(priorUserName);
+            }
+        });
+    </script>
+}
