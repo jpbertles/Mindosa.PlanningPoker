@@ -1,0 +1,2 @@
+Mindosa.PlanningPoker
+=====================
