@@ -1,15 +1,38 @@
 body {
-  font: 16px Segoe UI;
-  background: url('/Content/images/background.jpg') fixed;
+  font-size: 16px;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: url('/Content/images/res_172428927.png') repeat;
+  margin: 0;
+  padding: 0;
 }
-#logo {
-  width: 75%;
-  margin: 15px auto 30px;
-  display: block;
+a {
+  color: #0e8a8a;
 }
-.inner-page #logo {
-  width: 60%;
-  margin: 8px auto;
+#header {
+  width: 100%;
+  background-color: rgba(74, 74, 74, 0.8);
+  text-align: center;
+  color: #fff;
+}
+#header a {
+  text-decoration: none;
+  color: #fff;
+}
+#header h1 {
+  margin: 0;
+  padding: 32px;
+  font-size: 50px;
+  font-family: 'Poiret One', cursive, serif;
+}
+#header h1 img {
+  height: 140px;
+  vertical-align: middle;
+}
+#header h1 span {
+  display: inline-block;
+}
+.inner-page #header h1 img {
+  height: 100px;
 }
 .centered {
   text-align: center;
@@ -19,7 +42,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   margin: 0 auto;
   padding: 20px;
-  border-radius: .2em;
+  border-radius: 0 0 .2em .2em;
   position: relative;
   box-shadow: 1px 2px 10px 1px #666;
 }
@@ -64,6 +87,9 @@ body {
 .card-list {
   text-align: center;
 }
+#card-list {
+  padding-left: 0;
+}
 #card-list li {
   display: inline-block;
   width: 2em;
@@ -95,6 +121,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+  border: none;
 }
 input[type='button'] i,
 input[type='submit'] i,
@@ -211,4 +238,14 @@ a i {
 }
 #footer i {
   color: #0e8a8a;
+}
+@media only screen and (max-width: 400px) {
+  input[type="text"] {
+    width: 175px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+  input[type="text"] {
+    width: 250px;
+  }
 }

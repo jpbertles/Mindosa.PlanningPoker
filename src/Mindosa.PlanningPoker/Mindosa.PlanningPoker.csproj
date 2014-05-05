@@ -97,6 +97,9 @@
       <DependentUpon>site.less</DependentUpon>
     </Content>
     <Content Include="Content\css\site.less" />
+    <Content Include="Content\images\res_172428927.png" />
+    <Content Include="Content\images\simple-logo.svg" />
+    <Content Include="Scripts\group.js" />
     <Content Include="Content\vendor\font-awesome-4.0.3\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\vendor\font-awesome-4.0.3\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\vendor\font-awesome-4.0.3\fonts\fontawesome-webfont.woff" />
@@ -138,7 +141,6 @@
     <Content Include="Content\vendor\font-awesome-4.0.3\css\font-awesome.min.css" />
     <Content Include="Content\vendor\font-awesome-4.0.3\fonts\fontawesome-webfont.svg" />
     <Content Include="favicon.ico" />
-    <Content Include="Scripts\handlebars-v1.3.0.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
     <Content Include="Scripts\jquery.cookie.js" />
