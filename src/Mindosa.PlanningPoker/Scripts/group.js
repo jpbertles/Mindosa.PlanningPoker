@@ -89,6 +89,7 @@
         $.connection.hub.start().done(function() {
             planningHub.server.joinGroup(model.group, model.myUserName).done(function(userName) {
                 $.cookie('username', userName);
+                model.myUserName = userName;
             });
         });
     };

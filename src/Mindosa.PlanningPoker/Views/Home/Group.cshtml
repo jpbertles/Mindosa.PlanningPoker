@@ -47,14 +47,14 @@
 <ul id="user-list" class="card-list inner-panel">
     <li rv-each-user="model.users">
         <div rv-unless="user.isObserver">
-            <span class="user-name">{user.name}</span>
-            <div class="user-card card" rv-class-selected="user.card.selected"><span rv-if="model.showSelections">{user.card.name}</span></div>
+            <span class="user-name" rv-text="user.name"></span>
+            <div class="user-card card" rv-class-selected="user.card.selected"><span rv-if="model.showSelections" rv-text="user.card.name"></span></div>
         </div>
     </li>
 </ul>
 
 <ul id="card-list" class="card-list">
-    <li rv-each-card="model.cards" rv-on-click="vm.onCardClicked" class="card" rv-class-selected="card.selected">{card.name}</li>
+    <li rv-each-card="model.cards" rv-on-click="vm.onCardClicked" class="card" rv-class-selected="card.selected" rv-text="card.name"></li>
 </ul>
 
 @section scripts{
