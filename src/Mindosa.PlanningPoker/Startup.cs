@@ -19,7 +19,9 @@ namespace Mindosa.PlanningPoker
              * */
             GlobalHost.DependencyResolver.Register(typeof(PlanningHub), () => new PlanningHub(new GroupRepository()));
 
-            app.MapSignalR().UseNancy();
+            var hubConfiguration = new HubConfiguration();
+            hubConfiguration.EnableDetailedErrors = true;
+            app.MapSignalR(hubConfiguration).UseNancy();
         }
     }
 }

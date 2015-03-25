@@ -9,6 +9,10 @@
     
     // Declare a proxy to reference the hub. 
     var planningHub = $.connection.planningHub;
+
+    $.connection.hub.error(function(error) {
+        console.debug('SignalR error: ' + error);
+    });
     
     function areAllCardsSelected() {
         for (var i = 0; i < model.users.length; i++) {
