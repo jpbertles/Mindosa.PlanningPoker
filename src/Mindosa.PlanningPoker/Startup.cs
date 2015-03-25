@@ -11,6 +11,8 @@ namespace Mindosa.PlanningPoker
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             /*
              * The TinyIocDependencyResolver apparently can't resolve the PlanningHub
              * Largely pulled from http://stackoverflow.com/questions/13817794/signalr-nancyfx-integration
@@ -19,8 +21,7 @@ namespace Mindosa.PlanningPoker
              * */
             GlobalHost.DependencyResolver.Register(typeof(PlanningHub), () => new PlanningHub(new GroupRepository()));
 
-            var hubConfiguration = new HubConfiguration();
-            hubConfiguration.EnableDetailedErrors = true;
+            var hubConfiguration = new HubConfiguration {EnableDetailedErrors = true, EnableJSONP = true};
             app.MapSignalR(hubConfiguration).UseNancy();
         }
     }
