@@ -11,7 +11,12 @@ namespace Mindosa.PlanningPoker
     {
         public void Configuration(IAppBuilder app)
         {
-            //TODO: FUGLY...do something here
+            /*
+             * The TinyIocDependencyResolver apparently can't resolve the PlanningHub
+             * Largely pulled from http://stackoverflow.com/questions/13817794/signalr-nancyfx-integration
+             * I also tried using a Bootstrapper as in the example, but it doesn't seem to matter.
+             * TinyIoCContainer.CanResolve(typeof(PlanningHub)) returns false...so no dice
+             * */
             GlobalHost.DependencyResolver.Register(typeof(PlanningHub), () => new PlanningHub(new GroupRepository()));
 
             app.MapSignalR().UseNancy();
